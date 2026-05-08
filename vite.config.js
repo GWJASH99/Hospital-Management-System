@@ -9,5 +9,8 @@ export default defineConfig({
     proxy: {
       '/api': 'http://localhost:9000'
     }
+  },
+  build: {
+    target: 'esnext'
   }
 })

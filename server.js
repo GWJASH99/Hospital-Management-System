@@ -610,7 +610,7 @@ authRoutes.get("/about/:id", about);
 authRoutes.delete("/delete/:id", deleteAcc);
 authRoutes.put("/delete", updateAcc);
 
-await connectDb();
+connectDb();
 
 app.use("/api/admin", adminRoutes);
 app.use("/admin", adminRoutes);

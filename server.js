@@ -613,9 +613,13 @@ authRoutes.put("/delete", updateAcc);
 await connectDb();
 
 app.use("/api/admin", adminRoutes);
+app.use("/admin", adminRoutes);
 app.use("/api/doctor", doctorRoutes);
+app.use("/doctor", doctorRoutes);
 app.use("/api/user", userRoutes);
+app.use("/user", userRoutes);
 app.use("/api/auth", authRoutes);
+app.use("/auth", authRoutes);
 
 app.get("/", (req, res) => {
   res.json({ message: "hello world" });

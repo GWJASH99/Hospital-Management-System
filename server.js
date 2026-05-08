@@ -4,7 +4,7 @@ import mongoose from "mongoose";
 
 const app = express();
 const PORT = process.env.PORT || 9000;
-const MONGO_URI ="mongodb://127.0.0.1/hospital";
+const MONGO_URI = process.env.MONGO_URI || "mongodb://127.0.0.1/hospital";
 
 app.use(express.json());
 app.use(cors());

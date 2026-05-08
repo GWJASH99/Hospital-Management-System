@@ -87,25 +87,7 @@ const Appointment = mongoose.model("Appointment", appointmentSchema);
 const Medicine = mongoose.model("Medicine", medicineSchema);
 
 const signup = async (req, res) => {
-  const { userName, userEmail, userPassword } = req.body;
-  try {
-    if (!userName || !userEmail || !userPassword) {
-      return res.status(404).json({ message: "All fields are require" });
-    }
-    const user = await User.findOne({ userEmail });
-    if (user) {
-      return res.status(401).json({ message: "User already exgists" });
-    }
-    const newUser = await User.create({ userName, userEmail, userPassword });
-    if (newUser) {
-      return res
-        .status(200)
-        .json({ message: "User Signup successfully", user: newUser });
-    }
-    res.status(500).json({ message: "Somthing whent wrong" });
-  } catch (error) {
-    res.status(500).json({ message: error.message });
-  }
+  return res.json({ message: "Signup route reached! The backend is working." });
 };
 
 const login = async (req, res) => {

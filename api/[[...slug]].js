@@ -13,6 +13,10 @@ app.get("/api/test", (req, res) => {
   res.json({ message: "API is working!" });
 });
 
+app.get("/api/debug", (req, res) => {
+  res.json({ url: req.url, path: req.path, originalUrl: req.originalUrl });
+});
+
 async function connectDb() {
   try {
     await mongoose.connect(MONGO_URI);

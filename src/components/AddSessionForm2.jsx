@@ -57,7 +57,7 @@ const AddSessionForm2 = ({ setShowForm, refreshFunction }) => {
 
     try {
       setLoading(true);
-      const res = await fetch("http://localhost:9000/api/admin/sessions", {
+      const res = await fetch("/api/admin/sessions", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

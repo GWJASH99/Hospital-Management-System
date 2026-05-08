@@ -4,7 +4,7 @@ export const aboutMe = async (id) => {
     }
   try {
     const res = await fetch(
-      `http://localhost:9000/api/auth/about/${id}`,
+      `/api/auth/about/${id}`,
       {
         method: "GET",
       }
@@ -21,7 +21,7 @@ export const deleteAccount = async (id) => {
     }
   try {
     const res = await fetch(
-      `http://localhost:9000/api/auth/delete/${id}`,
+      `/api/auth/delete/${id}`,
       {
         method: "DELETE",
       }

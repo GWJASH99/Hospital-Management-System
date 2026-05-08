@@ -38,7 +38,7 @@ const AddDoctorForm = ({ showForm, setShowForm, refreshFunction }) => {
     try {
       setLoading(true);
       setError(null);
-      const res = await fetch("http://localhost:9000/api/admin/doctor", {
+      const res = await fetch("/api/admin/doctor", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

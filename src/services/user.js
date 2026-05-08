@@ -1,6 +1,6 @@
 export const makeAppointment = async (data) => {
   try {
-    const res = await fetch(`http://localhost:9000/api/user/appointment`, {
+    const res = await fetch(`/api/user/appointment`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
@@ -14,7 +14,7 @@ export const makeAppointment = async (data) => {
 export const getAppointments = async (id) => {
   try {
     const res = await fetch(
-      `http://localhost:9000/api/user/appointment/${id}`,
+      `/api/user/appointment/${id}`,
       {
         method: "GET",
       }
@@ -28,7 +28,7 @@ export const getAppointments = async (id) => {
 export const getInfo = async (id) => {
   try {
     const res = await fetch(
-      `http://localhost:9000/api/user/info/${id}`,
+      `/api/user/info/${id}`,
       {
         method: "GET",
       }
@@ -42,7 +42,7 @@ export const getInfo = async (id) => {
 export const getMedicine = async (id) => {
   try {
     const res = await fetch(
-      `http://localhost:9000/api/user/medicine/${id}`,
+      `/api/user/medicine/${id}`,
       {
         method: "GET",
       }
@@ -56,7 +56,7 @@ export const getMedicine = async (id) => {
 export const getDoctorAppointments = async (id) => {
   try {
     const res = await fetch(
-      `http://localhost:9000/api/doctor/appointment/${id}`,
+      `/api/doctor/appointment/${id}`,
       {
         method: "GET",
       }
@@ -70,7 +70,7 @@ export const getDoctorAppointments = async (id) => {
 export const deleteAppointments = async (id) => {
   try {
     const res = await fetch(
-      `http://localhost:9000/api/user/appointment/${id}`,
+      `/api/user/appointment/${id}`,
       {
         method: "DELETE",
       }
@@ -84,7 +84,7 @@ export const deleteAppointments = async (id) => {
 export const buyMedicines = async (id) => {
   try {
     const res = await fetch(
-      `http://localhost:9000/api/user/medicine/${id}`,
+      `/api/user/medicine/${id}`,
       {
         method: "PUT",
       }

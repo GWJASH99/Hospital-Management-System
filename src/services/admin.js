@@ -1,6 +1,6 @@
 export const getDoctors = async ()=>{
     try {
-        const res = await fetch('http://localhost:9000/api/admin/doctors')
+        const res = await fetch('/api/admin/doctors')
         const data = await  res.json()
         return data
     } catch (error) {
@@ -9,7 +9,7 @@ export const getDoctors = async ()=>{
 }
 export const getMedicine = async ()=>{
     try {
-        const res = await fetch('http://localhost:9000/api/admin/medicine')
+        const res = await fetch('/api/admin/medicine')
         const data = await  res.json()
         return data
     } catch (error) {
@@ -18,7 +18,7 @@ export const getMedicine = async ()=>{
 }
 export const giveMedicine = async (data)=>{
  try {
-    const res = await fetch(`http://localhost:9000/api/doctor/medicine`, {
+    const res = await fetch(`/api/doctor/medicine`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
@@ -31,7 +31,7 @@ export const giveMedicine = async (data)=>{
 }
 export const getPatients = async ()=>{
     try {
-        const res = await fetch('http://localhost:9000/api/admin/patients')
+        const res = await fetch('/api/admin/patients')
         const data = await  res.json()
         return data
     } catch (error) {
@@ -40,7 +40,7 @@ export const getPatients = async ()=>{
 }
 export const getAppointment = async ()=>{
     try {
-        const res = await fetch('http://localhost:9000/api/admin/appointment')
+        const res = await fetch('/api/admin/appointment')
         const data = await  res.json()
         return data
     } catch (error) {
@@ -49,7 +49,7 @@ export const getAppointment = async ()=>{
 }
 export const getSessions = async ()=>{
     try {
-        const res = await fetch('http://localhost:9000/api/admin/sessions')
+        const res = await fetch('/api/admin/sessions')
         const data = await  res.json()
         return data
     } catch (error) {
@@ -58,7 +58,7 @@ export const getSessions = async ()=>{
 }
 export const deleteDoctor = async (id)=>{
     try {
-        const res = await fetch(`http://localhost:9000/api/admin/doctor/${id}`,{
+        const res = await fetch(`/api/admin/doctor/${id}`,{
             method: "DELETE",
         })
         const data = await  res.json()
@@ -69,7 +69,7 @@ export const deleteDoctor = async (id)=>{
 }
 export const deleteUser = async (id)=>{
     try {
-        const res = await fetch(`http://localhost:9000/api/admin/doctor/${id}`,{
+        const res = await fetch(`/api/admin/doctor/${id}`,{
             method: "DELETE",
         })
         const data = await  res.json()
@@ -80,7 +80,7 @@ export const deleteUser = async (id)=>{
 }
 export const deleteSessions = async (id)=>{
     try {
-        const res = await fetch(`http://localhost:9000/api/admin/sessions/${id}`,{
+        const res = await fetch(`/api/admin/sessions/${id}`,{
             method: "DELETE",
         })
         const data = await  res.json()
@@ -91,7 +91,7 @@ export const deleteSessions = async (id)=>{
 }
 export const getDoctorSessions = async (id)=>{
      try {
-        const res = await fetch(`http://localhost:9000/api/doctor/sessions/${id}`)
+        const res = await fetch(`/api/doctor/sessions/${id}`)
         const data = await  res.json()
         return data
     } catch (error) {
@@ -101,7 +101,7 @@ export const getDoctorSessions = async (id)=>{
 export const getInfo = async () => {
   try {
     const res = await fetch(
-      `http://localhost:9000/api/admin/info`,
+      `/api/admin/info`,
       {
         method: "GET",
       }
@@ -115,7 +115,7 @@ export const getInfo = async () => {
 export const givMedicines = async (id) => {
   try {
     const res = await fetch(
-      `http://localhost:9000/api/admin/medicine/${id}`,
+      `/api/admin/medicine/${id}`,
       {
         method: "PUT",
       }

@@ -49,7 +49,7 @@ const UpdateProfile = ({setShowForm}) => {
     try {
       setLoading(true);
       setError(null);
-      const res = await fetch("http://localhost:9000/api/auth/delete", {
+      const res = await fetch("/api/auth/delete", {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

@@ -9,6 +9,10 @@ const MONGO_URI = process.env.MONGO_URI || "mongodb://127.0.0.1/hospital";
 app.use(express.json());
 app.use(cors());
 
+app.get("/api/test", (req, res) => {
+  res.json({ message: "API is working!" });
+});
+
 async function connectDb() {
   try {
     await mongoose.connect(MONGO_URI);

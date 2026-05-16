@@ -80,8 +80,7 @@ if (user?.role === "user") {
       { path: "analytics", element: <Analytics /> },
     ],
   });
-} else if (user?.role === "pharmacists") {
-  routes.push({
+} else if (user?.role === "pharmacists" || user?.role === "pharmacist") {
     path: "/home",
     element: <PharmesyLayout />,
     children: [

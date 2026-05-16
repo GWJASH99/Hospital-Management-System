@@ -11,7 +11,9 @@ app.use(cors());
 
 async function connectDb() {
   try {
-    await mongoose.connect(MONGO_URI);
+    await mongoose.connect(MONGO_URI, {
+      tlsAllowInvalidCertificates: true,
+    });
     console.log("connected to mongoose");
   } catch (error) {
     console.log("faild to connect to mongoose : ", error.message);
@@ -26,7 +28,7 @@ const userSchema = new mongoose.Schema(
     role: {
       type: String,
       default: "user",
-      enum: ["user", "admin", "doctor", "pharmacists"],
+      enum: ["user", "admin", "doctor", "pharmacists", "pharmacist"],
     },
   },
   { timestamps: true, versionKey: false }
